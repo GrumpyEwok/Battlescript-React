@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD:src/components/App.jsx
 import './../styles/App.css';
 import KonvaTest from './KonvaTest';
 import AttackGrid from './AttackGrid';
 import DefendGrid from './DefendGrid';
 import Header from './Header';
 import Stats from './Stats';
-=======
-import Header from './components/Header';
-
-import './App.css';
-import KonvaTest from './components/KonvaTest';
->>>>>>> master:src/App.jsx
 
 class App extends Component {
   constructor() {
@@ -32,13 +25,9 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-<<<<<<< HEAD:src/components/App.jsx
         <AttackGrid/>
         <DefendGrid/>
         <Stats/>
-=======
-        {game}
->>>>>>> master:src/App.jsx
       </div>
     );
   }

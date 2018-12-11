@@ -16,7 +16,9 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "no-unused-vars": 1,
+    "no-undef": 1
   },
   "browserslist": [
     ">0.2%",

@@ -4,24 +4,29 @@ import PropTypes from 'prop-types';
 function DefendGrid() {
 
   const gridSquares = Array(100).fill(0)
-
   return (
     <div className="grid-container-small">
       <style jsx>{`
         .grid-container-small {
           display: grid;
-          grid-template-columns: repeat(10, 1%);
-          grid-template-rows: repeat(10, 1%);
+          grid-template-columns: repeat(10, 2rem);
+          grid-template-rows: repeat(10, 2rem);
         }
-        .square {
+        .square-small {
           background-color: saddlebrown;
           color: wheat;
           text-shadow: 0 2px 1px white;
+          border: 1px solid aquamarine;
+          border-radius: .25rem;
+          padding: .25rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       `}</style>
-      gridSquares.map((square) =>{
-        return <div className="square">{square.value}</div>
-      })
+      {gridSquares.map(square =>
+        <div className="square-small">{square}</div>
+      )}
     </div>
   )
 
