@@ -5,4 +5,4 @@ function DefendGrid() {
 
 }
 
-export default Counter;
+export default DefendGrid;
