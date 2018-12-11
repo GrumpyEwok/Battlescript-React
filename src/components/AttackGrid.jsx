@@ -26,8 +26,8 @@ console.log(gridSquares);
           align-items: center;
         }
       `}</style>
-    {gridSquares.map(square =>
-        <div className="square">{square}</div>
+    {gridSquares.map((square, index) =>
+        <div key={index} className="square">{square}</div>
       )}
     </div>
   )

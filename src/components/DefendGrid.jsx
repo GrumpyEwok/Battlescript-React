@@ -24,9 +24,9 @@ function DefendGrid() {
           align-items: center;
         }
       `}</style>
-      {gridSquares.map(square =>
-        <div className="square-small">{square}</div>
-      )}
+      {gridSquares.map((square, index) =>
+          <div key={index} className="square-small">{square}</div>
+        )}
     </div>
   )
 
