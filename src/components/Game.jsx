@@ -10,10 +10,12 @@ class Game extends Component {
         player1: {
           battlefield: [], // An array of 10 arrays.
           position: [], // An Array of co-ords. 0 = Empty. 1 = Occupied. 2 = Hit.
+          score: 0
         },
         player2: {
           battlefield: [],
           position: [],
+          score: 0
         },
       }
     };
