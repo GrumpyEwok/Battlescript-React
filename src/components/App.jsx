@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
-import KonvaTest from './components/KonvaTest';
+import './../styles/App.css';
+import KonvaTest from './KonvaTest';
+import AttackGrid from './AttackGrid';
+import DefendGrid from './DefendGrid';
+import Header from './Header';
+import Stats from './Stats';
 
 class App extends Component {
   constructor() {
@@ -20,10 +24,10 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header className="App-header">
-          <p>This is a header!</p>
-        </header>
-        {game}
+        <Header/>
+        <AttackGrid/>
+        <DefendGrid/>
+        <Stats/>
       </div>
     );
   }
