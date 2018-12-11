@@ -7,7 +7,7 @@ function Stats() {
 
   return(
     <div>
-      <ul>
+      <ul style="list-style:none">
         <li>Turn Counter: {turnCounter}</li>
         <li>Score: {score}</li>
       </ul>
