@@ -25,6 +25,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
+      {game}
         <AttackGrid/>
         <DefendGrid/>
         <Stats/>
