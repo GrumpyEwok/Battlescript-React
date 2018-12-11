@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import KonvaTest from './components/KonvaTest';
 
 class App extends Component {
   constructor() {
@@ -12,9 +13,9 @@ class App extends Component {
     let game;
 
     if (isGameRunning) {
-      game =  <p>Game Goes Here!</p> ;
+      game =  <div><p>Game Goes Here!</p><KonvaTest/></div> ;
     } else {
-      game = <p> </p>;
+      game = <p> isGameRunning: False </p>;
     }
 
     return (
