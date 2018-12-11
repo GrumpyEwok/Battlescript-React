@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Header from './components/Header';
+
 import './App.css';
 import KonvaTest from './components/KonvaTest';
 
@@ -20,9 +22,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header className="App-header">
-          <p>This is a header!</p>
-        </header>
+        <Header/>
         {game}
       </div>
     );
