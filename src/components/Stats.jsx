@@ -4,8 +4,10 @@ import PropTypes from 'prop-types';
 function Stats() {
   let turnCounter = 0;
   let score = 0;
-
+  
+  
   return(
+
     <div className="stats">
     <style jsx>{`
       .stats {
@@ -24,6 +26,7 @@ function Stats() {
       }
     `}</style>
       <ul>
+
         <li>Turn Counter: {turnCounter}</li>
         <hr/>
         <li>Score: {score}</li>
