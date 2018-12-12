@@ -13,8 +13,8 @@ class KonvaTest extends Component {
     super(props);
     this.state = {
       boardCoords: [], // this.props.boardCoords  This array will reference the 'grid tiles' of our board. All collisions will refer to these indices.  This value needs to get set somehow....
-      width: (window.innerWidth),
-      height: (window.innerHeight /2 ),
+      width: window.innerWidth,
+      height: 1000,
       x: 0,
       y: 0,
       velX: 0,
@@ -53,7 +53,7 @@ class KonvaTest extends Component {
   handleUpdate() {
 
     const friction = 0.98;
-    const speed = 2;
+    const speed = 3;
     let x = this.state.x;
     let y = this.state.y;
     let velX = this.state.velX;
@@ -89,16 +89,16 @@ class KonvaTest extends Component {
     this.setState({x: x += velX});
 
 // Fix Canvas boundaries below.
-    if (x >= 295) {
-      this.setState({x: 295});
-    } else if (x <= 5) {
-      this.setState({x: 5});
+    if (x >= this.state.width - 100) {
+      this.setState({x: this.state.width - 100});
+    } else if (x <= 0) {
+      this.setState({x: 0});
     }
 
-    if (y > 295) {
-      this.setState({y: 295});
-    } else if (y <= 5) {
-      this.setState({y: 5});
+    if (y >= this.state.height - 100) {
+      this.setState({y: this.state.height - 100});
+    } else if (y <= 0) {
+      this.setState({y: 0});
     }
 
   };
@@ -125,8 +125,6 @@ class KonvaTest extends Component {
               fill={'blue'}
               shadowBlur={5}
               keys={this.state.keys}
-
-
             />
           </Layer>
         </Stage>

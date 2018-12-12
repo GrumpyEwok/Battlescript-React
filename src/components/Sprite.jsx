@@ -2,17 +2,6 @@ import React, { Component } from 'react';
 import Konva from 'konva';
 import { Image } from 'react-konva';
 
-// const sprite = new Image();
-//
-// sprite.src = '#';
-//
-// sprite.onload = () => {
-//   this.setState({
-//     battleSprite: sprite,
-//   });
-// };
-
-
 class Sprite extends Component {
   constructor(props) {
     super(props);
@@ -28,9 +17,20 @@ class Sprite extends Component {
     };
   }
 
+  /*
   componentDidMount() {
+    Initialization / Loading Logic here.
+      const sprite = new Image();
 
+      sprite.src = '#';
+
+      sprite.onload = () => {
+        this.setState({
+          battleSprite: sprite,
+      });
+    };
   }
+  */
 
   render() {
 
