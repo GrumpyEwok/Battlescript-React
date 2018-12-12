@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import constants from './../constants';
 
 function DefendGrid() {
 
@@ -24,9 +26,9 @@ function DefendGrid() {
           align-items: center;
         }
       `}</style>
-      {gridSquares.map(square =>
-        <div className="square-small">{square}</div>
-      )}
+      {gridSquares.map((square, index) =>
+          <div key={index} className="square-small">{square}</div>
+        )}
     </div>
   )
 

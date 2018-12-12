@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import constants from './../constants';
+
 
 function AttackGrid() {
 
@@ -26,8 +29,8 @@ console.log(gridSquares);
           align-items: center;
         }
       `}</style>
-    {gridSquares.map(square =>
-        <div className="square">{square}</div>
+    {gridSquares.map((square, index) =>
+        <div key={index} className="square">{square}</div>
       )}
     </div>
   )
