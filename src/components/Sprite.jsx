@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Konva from 'konva';
 import { Image } from 'react-konva';
 
 // const sprite = new Image();
@@ -10,8 +11,7 @@ import { Image } from 'react-konva';
 //     battleSprite: sprite,
 //   });
 // };
-const friction = 0.98;
-const speed = 2;
+
 
 class Sprite extends Component {
   constructor(props) {
@@ -21,29 +21,21 @@ class Sprite extends Component {
       battleSprite: null,  // This will hold our 'Sprite' image object src ref.
       x: this.props.x,
       y: this.props.y,
-      velX: 0,
-      velY: 0,
-      keys: []
+      velX: this.props.velX,
+      velY: this.props.velY,
+      keys: [],
+      onUpdate: this.props.handleUpdate,
     };
   }
 
   componentDidMount() {
-    window.addEventListener('keydown', (e) => {
-      this.state.keys[e.keyCode] = true;
-      console.log(this.state.keys[e.keyCode])
-      // e.preventDefault()  This preventDefault will stop someone from scrolling with arrows while the Konva component is mounted.
-    });
-
-    window.addEventListener('keyup', (e) => {
-      this.state.keys[e.keyCode] = false;
-      console.log(this.state);
-    });
+    this.state.onUpdate();
   }
 
   render() {
 
     return(
-      <Image fill={'blue'} image={this.state.battleSprite} x={this.state.x} y={this.state.y} width={200} height={200}/>
+      <Image fill={'blue'} image={this.state.battleSprite} x={this.props.x} y={this.props.y} width={100} height={100}/>
     )
   }
 }
