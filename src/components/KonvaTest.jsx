@@ -27,7 +27,10 @@ class KonvaTest extends Component {
     window.addEventListener('keydown', (e) => {
       this.state.keys[e.keyCode] = true;
       console.log(this.state.keys[e.keyCode])
-      e.preventDefault()  // This preventDefault will stop someone from scrolling with arrows while the Konva component is mounted.
+      e.preventDefault()
+
+      // This preventDefault will stop someone from scrolling with arrows while the Konva component is mounted. Better to remove this, and set a full-screen size.
+
     });
 
     window.addEventListener('keyup', (e) => {
@@ -35,11 +38,12 @@ class KonvaTest extends Component {
 
     });
 
-   // var anim = new Konva.Animation(frame => {
-    //   this.ref.opacity((Math.sin(frame.time / period) + 1) / 2);
-    // }, this.ref.getLayer()
+   // Instantiate timer.  Timer calls our Update function every frame.
       this.timer = timer(() => this.handleUpdate());
-    // anim.start();
+
+
+   // Consider setting a timeOut here, if there is no key being pressed we don't need to render.
+
       setInterval(function() {
         console.log('tick');
       }, 10000)
@@ -121,7 +125,7 @@ class KonvaTest extends Component {
               fill={'blue'}
               shadowBlur={5}
               keys={this.state.keys}
-              handleUpdate={this.handleUpdate.bind(this)}
+
 
             />
           </Layer>

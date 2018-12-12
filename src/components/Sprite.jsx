@@ -24,12 +24,11 @@ class Sprite extends Component {
       velX: this.props.velX,
       velY: this.props.velY,
       keys: [],
-      onUpdate: this.props.handleUpdate,
     };
   }
 
   componentDidMount() {
-    this.state.onUpdate();
+
   }
 
   render() {

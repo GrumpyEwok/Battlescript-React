@@ -9,7 +9,7 @@ import Stats from './Stats';
 class App extends Component {
   constructor() {
     super();
-    this.state = {isGameRunning: true};
+    this.state = {isGameRunning: false};
   }
 
   render() {
