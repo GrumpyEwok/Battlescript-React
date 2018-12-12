@@ -1,8 +1,8 @@
-import Firebase from 'firebase';
+// import Firebase from 'firebase';
 import constants from './../constants';
-const { firebaseConfig } = constants;
+// const { firebaseConfig } = constants;
 
-firebase.initializeApp(firebaseConfig);
+// firebase.initializeApp(firebaseConfig);
 
 export function startGame() {
   return {

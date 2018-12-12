@@ -5,9 +5,9 @@ import App from './components/App';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 // import rootReducer from './reducers/index';
-import startGameReducer from './reducers/startGameReducer';
+import gameReducer from './reducers/gameReducer';
 
-const store = createStore(startGameReducer);
+const store = createStore(gameReducer);
 
 let unsubscribe = store.subscribe(() =>
 console.log(store.getState())
