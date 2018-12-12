@@ -12,6 +12,8 @@ Keydown Stack https://stackoverflow.com/questions/22262130/javascript-game-move-
 
 Continuous Movement https://gamedev.stackexchange.com/questions/130576/how-can-i-make-my-movement-continuous
 
+Water-Canvas Filter Effect http://code.almeros.com/code-examples/water-effect-canvas/#.XBAHkRNKi3K
+
 <!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
