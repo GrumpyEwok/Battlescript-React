@@ -2,49 +2,57 @@
 const OCEAN_SIZE = 10
 const FLEET = [4, 3, 2, 1]
 
-function attack (db, coords) {
+function attack (playerState, coords) {
   debugger
   const { x, y } = coords
+
+  if (playerState.p1State) {
+    const playerEntry = "player1"
+  }
+
+  if (playerState.p2State) {
+    const playerEntry = "player2"
+  }
 
 //coords are 0-9, aka indices (not 1-10)
   const response = { }
 
-  if (db.finished === true) {
-    response.db = db
+  if (playerState[playerEntry].finished === true) {
+    response.playerState[playerEntry] = playerState[playerEntry]
     response.msg = 'Dude it\'s finished!'
 
     return response
   }
 
-  db.counter += 1
-  const target = db.battlefield[y][x]
+  playerState[playerEntry].counter += 1
+  const target = playerState[playerEntry].battlefield[y][x]
 
   if (target === 2) {
-    response.db = db
+    response.playerState[playerEntry] = playerState[playerEntry]
     response.msg = 'You already hit this position!'
   }
 
   if (target === 0) {
-    db.battlefield[y][x] = 2
-    response.db = db
-    response.msg = `Miss New Hampshire is ${db.battlefield}`
+    playerState[playerEntry].battlefield[y][x] = 2
+    response.playerState[playerEntry] = playerState[playerEntry]
+    response.msg = `Miss New Hampshire is ${playerState[playerEntry].battlefield}`
   }
 
   if (target === 1) {
-    db.position.forEach((ship, idxShip) => {
+    playerState[playerEntry].position.forEach((ship, idxShip) => {
       ship.forEach((block, idxBlock) => {
         if (block.x === x && block.y === y) {
-          db.position[idxShip][idxBlock] = 2
-          db.battlefield[y][x] = 2
+          playerState[playerEntry].position[idxShip][idxBlock] = 2
+          playerState[playerEntry].battlefield[y][x] = 2
         }
 
       })
     })
-    response.db = db
+    response.playerState[playerEntry] = playerState[playerEntry]
     response.msg = 'Hit'
   }
 
-  const sank = db.position.map(y => {
+  const sank = playerState[playerEntry].position.map(y => {
     return y.every(x => x === 2)
   })
 
@@ -52,7 +60,7 @@ function attack (db, coords) {
 
   const sankType = sank.map((x, i) => {
     if (x) {
-      switch (db.position[i].length) {
+      switch (playerState[playerEntry].position[i].length) {
         case 4:
           return { type: 'battleship', index: i }
         case 3:
@@ -73,16 +81,16 @@ function attack (db, coords) {
 
   if (isSank) {
     const removed = sankType[0].index
-    const start = db.position.slice(0, removed)
-    const end = db.position.slice(removed+1, db.position.length)
-    db.position = [ ...start, ...end ]
-    response.db = db
+    const start = playerState[playerEntry].position.slice(0, removed)
+    const end = playerState[playerEntry].position.slice(removed+1, playerState[playerEntry].position.length)
+    playerState[playerEntry].position = [ ...start, ...end ]
+    response.playerState[playerEntry] = playerState[playerEntry]
     response.msg = `You just sank the ${sankType[0].type}`
   }
 
-  if (db.position.length === 0) {
-    response.db.finished = true
-    response.msg = `Win! You completed the game in ${db.counter} moves`
+  if (playerState[playerEntry].position.length === 0) {
+    response.playerState[playerEntry].finished = true
+    response.msg = `Win! You completed the game in ${playerState[playerEntry].counter} moves`
   }
 
   return response

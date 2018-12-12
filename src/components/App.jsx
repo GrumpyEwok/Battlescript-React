@@ -5,6 +5,8 @@ import AttackGrid from './AttackGrid';
 import DefendGrid from './DefendGrid';
 import Header from './Header';
 import Stats from './Stats';
+import { connect } from 'react-redux';
+// import constants from './../constants';
 
 class App extends Component {
   constructor() {
