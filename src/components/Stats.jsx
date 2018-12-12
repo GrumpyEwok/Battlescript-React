@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Stats() {
+  // State?
   let turnCounter = 0;
-  let score = 0;
-  
+  let score = 0; 
   
   return(
 

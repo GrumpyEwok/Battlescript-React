@@ -1,4 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Links:
+
+Best Konva Tutorial https://blog.logrocket.com/creating-canvas-graphics-in-react-cad70cd5b210
+
+Water Movement Demo http://jsfiddle.net/loktar/dMYvG/
+
+Fullscreen/Responsive Canvas https://konvajs.github.io/docs/sandbox/Responsive_Canvas.html
+
+Batch Draw https://konvajs.github.io/docs/performance/Batch_Draw.html
+
+Keydown Stack https://stackoverflow.com/questions/22262130/javascript-game-move-character-while-key-down
+
+Continuous Movement https://gamedev.stackexchange.com/questions/130576/how-can-i-make-my-movement-continuous
+
+Water-Canvas Filter Effect http://code.almeros.com/code-examples/water-effect-canvas/#.XBAHkRNKi3K
+
+<!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -41,4 +57,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To learn React, check out the [React documentation](https://reactjs.org/). -->
