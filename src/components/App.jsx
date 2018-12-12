@@ -9,7 +9,7 @@ import Stats from './Stats';
 class App extends Component {
   constructor() {
     super();
-    this.state = {isGameRunning: false};
+    this.state = {isGameRunning: true};
   }
 
   render() {
@@ -25,7 +25,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-      {game}
+        {game}
         <AttackGrid/>
         <DefendGrid/>
         <Stats/>

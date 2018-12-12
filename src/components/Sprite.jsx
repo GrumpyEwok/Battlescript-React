@@ -21,6 +21,7 @@ class Sprite extends Component {
       battleSprite: null,  // This will hold our 'Sprite' image object src ref.
       x: this.props.x,
       y: this.props.y,
+      // VelX vs VelY -- unnecessary here?
       velX: this.props.velX,
       velY: this.props.velY,
       keys: [],

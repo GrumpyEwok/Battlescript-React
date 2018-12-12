@@ -4,7 +4,7 @@ import { timer } from 'd3-timer';
 
 import Konva from 'konva';
 
-import { Stage, Layer, Rect } from 'react-konva';
+import { Stage, Layer } from 'react-konva';
 
 import Sprite from './Sprite';
 
