@@ -11,25 +11,25 @@ import { startGame } from './../actions';
 import PropTypes from 'prop-types';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
+  constructor() {
+      super();
+      this.state = {isGameRunning: false};
+    }
 
-  componentWillMount() {
-    const { dispatch } = this.props;
-    dispatch(startGame());
-    console.log('new game dispatched!');
-  }
+    render() {
+      const isGameRunning = this.state.isGameRunning;
+      let game;
 
-  componentDidMount() {
-    console.log(this.props);    
-  }
-
-  render() {
+      if (isGameRunning) {
+        game =  <div><p>Game Goes Here!</p><KonvaTest/></div> ;
+      } else {
+        game = <p> isGameRunning: False </p>;
+      }
 
     return (
       <div className="App">
         <Header/>
+        {game}
         <AttackGrid/>
         <DefendGrid/>
         <Stats/>
