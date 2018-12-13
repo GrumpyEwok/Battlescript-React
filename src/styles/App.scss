@@ -3,8 +3,17 @@
   padding: 0;
   cursor: crosshair;
   font-family: OCR A Std, monospace;
+  color: green;
 }
-
+.logo {
+     background-image: url("../assets/logo.jpeg");
+     background-size: cover;
+     height: 125px;
+     width: 125px;
+     position: absolute;
+     margin-left: 3rem;
+     mergin-top: 1rem;
+}
 .App {
   text-align: center;
   height: 100%;
@@ -12,7 +21,6 @@
 .battleField{
    background-image: url("../assets/BATTLEFIELD.jpg");
 }
-
 .App-header {
   background-color: #282c34;
   /* min-height: ; */
@@ -40,10 +48,10 @@ body{
     $scan-crt: true;
 
     // frames-per-second (should be > 1), only applies if $scan-crt: true;
-    $scan-fps: 30;
+    $scan-fps: 40;
 
     // scanline-color (rgba)
-    $scan-color: rgba(#000, .3);
+    $scan-color: rgba(#000, .4);
 
     // set z-index on 8, like in ♥ 8-bits ♥, or…
     // set z-index on 2147483648 or more to enable scanlines on Chrome fullscreen (doesn't work in Firefox or IE);
@@ -55,7 +63,7 @@ body{
     $scan-moving-line: true;
 
     // opacity of the moving scanline
-    $scan-opacity: .75;
+    $scan-opacity: .95;
 
 /* MIXINS */
 
@@ -111,7 +119,7 @@ body{
             z-index: $scan-z-index;
             background: linear-gradient(
                 to bottom,
-                transparent 50%,
+                transparent 40%,
                 $scan-color 51%
             );
             background-size: 100% $scan-width*2;
