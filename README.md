@@ -1,8 +1,8 @@
 # Battlescript
 
-#### Battleship, but single player
+#### A new take on Battleship.
 
-#### By Josh Gearheart, Chris Gosser, Evan Filkins, Eric Conner
+#### By Josh Gearheart, Chris Gosser, Evan Filkins, and Eric Conner
 
 ## Description
 
