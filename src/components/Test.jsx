@@ -10,6 +10,15 @@ function Test(props) {
   let _x = null;
   let _y = null;
 
+  const topZ = {
+    zIndex: '1000'
+  }
+
+  const biggie = {
+    height: '7rem',
+    fontSize: '3rem'
+  }
+
   const clicker = (event) => {
     event.preventDefault();
     const { dispatch } = props;
@@ -28,10 +37,10 @@ function Test(props) {
 
 
   return(
-    <div>
-      <input type="number" max="9" ref={(input) => {_x = input}} placeholder="Input X coordinate"></input>
-      <input type="number" max="9" ref={(input) => {_y = input}} placeholder="Input Y coordinate"></input>
-      <button onClick={clicker}>Click to attack</button>
+    <div >
+      <input style={biggie} type="number" max="9" ref={(input) => {_x = input}} placeholder="Input X coordinate"></input>
+      <input style={biggie} type="number" max="9" ref={(input) => {_y = input}} placeholder="Input Y coordinate"></input>
+      <button style={biggie} onClick={clicker}>Click to attack</button>
     </div>
   )
 
