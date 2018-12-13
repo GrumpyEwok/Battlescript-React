@@ -109,7 +109,7 @@ export const attackSquare = (state, coordsObject) => {
 
         const endgameArray = [];
         state.position.forEach((shipArray) => {
-          booleanValue = shipArray.every(findTwos);
+          let booleanValue = shipArray.every(findTwos);
           endgameArray.push(booleanValue)
         });
 

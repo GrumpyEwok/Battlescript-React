@@ -27,7 +27,7 @@ class KonvaTest extends Component {
     window.addEventListener('keydown', (e) => {
       this.state.keys[e.keyCode] = true;
       console.log(this.state.keys[e.keyCode])
-      e.preventDefault()
+      // e.preventDefault()
 
       // This preventDefault will stop someone from scrolling with arrows while the Konva component is mounted. Better to remove this, and set a full-screen size.
 

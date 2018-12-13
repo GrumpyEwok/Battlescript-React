@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { attack } from './../actions';
+import './../styles/Test.css';
 
 
 function Test(props) {
@@ -11,7 +12,6 @@ function Test(props) {
 
   const clicker = (event) => {
     event.preventDefault();
-
     const { dispatch } = props;
     const theState = {
       battlefield: props.battlefield,
@@ -29,9 +29,9 @@ function Test(props) {
 
   return(
     <div>
-      <input ref={(input) => {_x = input}} placeholder="Input X coordinate"></input>
-      <input ref={(input) => {_y = input}} placeholder="Input Y coordinate"></input>
-      <button onClick={clicker}>Click to attack</button>
+      <input type="number" max="9" ref={(input) => {_x = input}} placeholder="Input X coordinate"></input>
+      <input type="number" max="9" ref={(input) => {_y = input}} placeholder="Input Y coordinate"></input>
+      <button id="button" onClick={clicker}>Click to attack</button>
     </div>
   )
 
