@@ -38,7 +38,7 @@ body{
     $scan-crt: true;
 
     // frames-per-second (should be > 1), only applies if $scan-crt: true;
-    $scan-fps: 60;
+    $scan-fps: 30;
 
     // scanline-color (rgba)
     $scan-color: rgba(#000, .3);
@@ -68,7 +68,7 @@ body{
     // apply CRT animation: @include scan-crt($scan-crt);
     @mixin scan-moving($scan-moving-line) {
         @if $scan-moving-line == true {
-            animation: scanline 6s linear infinite;
+            animation: scanline 10s linear infinite;
         }
         @else { animation: none; }
     }
