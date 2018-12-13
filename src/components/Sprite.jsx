@@ -7,10 +7,12 @@ class Sprite extends Component {
     super(props);
     this.state = {
       boardCoords: this.props.boardCoords, // This array will reference the 'grid tiles' of our board. All collisions will refer to these indices.
-      battleSprite: null,  // This will hold our 'Sprite' image object src ref.
-      x: this.props.x,
-      y: this.props.y,
-      // VelX vs VelY -- unnecessary here?
+      battleSprite: null,  // This will hold our 'Sprite' image src ref.
+      pos: {
+        x: this.props.x,
+        y: this.props.y,
+      },
+      // VelX + VelY -- unnecessary here?
       velX: this.props.velX,
       velY: this.props.velY,
       keys: [],

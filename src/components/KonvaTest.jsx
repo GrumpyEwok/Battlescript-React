@@ -44,10 +44,6 @@ class KonvaTest extends Component {
 
    // Consider setting a timeOut here, if there is no key being pressed we don't need to render.
 
-      setInterval(function() {
-        console.log('tick');
-      }, 10000)
-    // Somehow this interval needs to be cleared.
   }
 
   handleUpdate() {
@@ -113,6 +109,7 @@ class KonvaTest extends Component {
         // Go INTO Rect.  Access X and Y as PROPS, and then calculate the changes in Rect.  Move keydown to Rect/Sprite, because it will need to have access to those values in order to calculate how to animate.
     return (
       <div style={bordered}>
+        <h1>{this.state.x}</h1><h1>{this.state.y}</h1>
         <Stage width={this.state.width} height={this.state.height}>
           <Layer>
             <Sprite
