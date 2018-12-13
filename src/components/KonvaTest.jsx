@@ -85,8 +85,8 @@ class KonvaTest extends Component {
     this.setState({x: x += velX});
 
 // Fix Canvas boundaries below.
-    if (x >= this.state.width - 115) {
-      this.setState({x: this.state.width - 115});
+    if (x >= this.state.width - 104) {
+      this.setState({x: this.state.width - 104});
     } else if (x <= 0) {
       this.setState({x: 0});
     }
