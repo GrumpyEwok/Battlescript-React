@@ -17,7 +17,6 @@ export default (state = {cat: 'doug'}, action) => {
 
     const stateAfterAttack = attackSquare(action.state, action.coordsObject);
     newState = Object.assign({}, stateAfterAttack);
-    console.log(newState);
     return newState;
 
   default:

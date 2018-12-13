@@ -8,8 +8,6 @@ function Test(props) {
 
   const clicker = (event) => {
     event.preventDefault();
-    console.log(props.battlefield);
-    console.log(props.position);
     const bf = props.battlefield;
     const pos = props.position;
     const { dispatch } = props;
@@ -17,9 +15,11 @@ function Test(props) {
       battlefield: props.battlefield,
       position: props.position
     }
-    console.log(theState);
-    dispatch(attack(theState, {x: 0, y: 0}))
-    console.log('an attack happened!');
+
+    const randomX = Math.floor(Math.random() * 10);
+    const randomY = Math.floor(Math.random() * 10);
+    dispatch(attack(theState, {x: randomX, y: randomY}));
+
   }
 
   return(
