@@ -15,7 +15,7 @@ function Test(props) {
   }
 
   const biggie = {
-    height: '7rem',
+    height: '5rem',
     fontSize: '3rem'
   }
 
