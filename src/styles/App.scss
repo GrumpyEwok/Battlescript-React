@@ -8,7 +8,9 @@
 .App {
   text-align: center;
   height: 100%;
-
+}
+.battleField{
+   background-image: url("../assets/BATTLEFIELD.jpg");
 }
 
 .App-header {
@@ -22,7 +24,7 @@
   color: white;
 }
 body{
-  background-color: #47516c;
+  background-color: black;
 }
 .App-link {
   color: #61dafb;

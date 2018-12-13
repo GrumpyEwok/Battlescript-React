@@ -103,13 +103,13 @@ class KonvaTest extends Component {
   render() {
 
     const bordered = {
-      border: '1px solid red',
+      border: '1px solid green',
     };
 
         // We pass our x and y values from state, which represent the sprite's coordinates relative to the canvas. This is incredibly cool.  Some of the props passed are likely unnecessary, and should be factored out.
 
     return (
-      <div style={bordered}>
+      <div style={bordered} className="battleField">
         <h1>{this.state.x}</h1><h1>{this.state.y}</h1>
         <Stage width={this.state.width} height={this.state.height}>
           <Layer>
