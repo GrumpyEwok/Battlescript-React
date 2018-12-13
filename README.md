@@ -29,7 +29,6 @@ cd ~/path/to/battlescript-react
 npm install
 
 npm run start
-
 ```
 
 # Presentation Notes:
@@ -53,18 +52,18 @@ This software is licensed under GNU GPLv3.
 
 Links:
 
-Best Konva Tutorial https://blog.logrocket.com/creating-canvas-graphics-in-react-cad70cd5b210
+Best Konva Tutorial: https://blog.logrocket.com/creating-canvas-graphics-in-react-cad70cd5b210
 
-Water Movement Demo http://jsfiddle.net/loktar/dMYvG/
+Water Movement Demo: http://jsfiddle.net/loktar/dMYvG/
 
-Fullscreen/Responsive Canvas https://konvajs.github.io/docs/sandbox/Responsive_Canvas.html
+Fullscreen/Responsive Canvas: https://konvajs.github.io/docs/sandbox/Responsive_Canvas.html
 
-Batch Draw https://konvajs.github.io/docs/performance/Batch_Draw.html
+Batch Draw: https://konvajs.github.io/docs/performance/Batch_Draw.html
 
-Keydown Stack https://stackoverflow.com/questions/22262130/javascript-game-move-character-while-key-down
+Keydown Stack: https://stackoverflow.com/questions/22262130/javascript-game-move-character-while-key-down
 
-Continuous Movement https://gamedev.stackexchange.com/questions/130576/how-can-i-make-my-movement-continuous
+Continuous Movement: https://gamedev.stackexchange.com/questions/130576/how-can-i-make-my-movement-continuous
 
-Water-Canvas Filter Effect http://code.almeros.com/code-examples/water-effect-canvas/#.XBAHkRNKi3K
+Water-Canvas Filter Effect: http://code.almeros.com/code-examples/water-effect-canvas/#.XBAHkRNKi3K
 
-scanlines codepen https://codepen.io/meduzen/pen/zxbwRV
+CRT Scanline Codepen: https://codepen.io/meduzen/pen/zxbwRV

@@ -10,7 +10,7 @@ function DefendGrid() {
     <div className="grid-container-small">
       <style jsx>{`
         .grid-container-small {
-          display: grid;
+          display: none;
           grid-template-columns: repeat(10, 2rem);
           grid-template-rows: repeat(10, 2rem);
         }
