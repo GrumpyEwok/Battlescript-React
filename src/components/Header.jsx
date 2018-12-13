@@ -7,6 +7,10 @@ function Header() {
   return(
     <div className="header">
       <style jsx>{`
+        *{
+          margin: 0;
+          padding; 0;
+        }
         .header {
           width: 100%;
           height: 6rem;
@@ -15,7 +19,7 @@ function Header() {
         }
       `}</style>
       <h1>BattleScripts</h1>
-      <p>You will be able to play battleship here!</p>
+      <p>The finest simulator of modern naval operations!</p>
     </div>
   )
 
