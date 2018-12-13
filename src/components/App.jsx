@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './../styles/App.css';
+import './../styles/App.scss';
 import KonvaTest from './KonvaTest';
 import AttackGrid from './AttackGrid';
 import DefendGrid from './DefendGrid';
@@ -27,7 +27,7 @@ class App extends Component {
       }
 
     return (
-      <div className="App">
+      <div className="App scanlines">
         <Header/>
         {game}
         <AttackGrid/>
