@@ -14,6 +14,15 @@ Continuous Movement https://gamedev.stackexchange.com/questions/130576/how-can-i
 
 Water-Canvas Filter Effect http://code.almeros.com/code-examples/water-effect-canvas/#.XBAHkRNKi3K
 
+# Presentation Notes:
+  * Evan starts, maybe, talks about Concept and (potential) failure to implement some reducer logic.  Demo Konva.
+
+  * Josh + Eric talk about what we can do (i.e. a board is generated, and filled correctly, which is cool -- people just can't see it out of console, but we can emphasize the point that it's there) and what was particularly challenging about what we couldn't.
+
+  * We should also talk about our original '2player' intention, and how firebase could have facilitated that by storing battlefield arrays under unique keys (likely referenced in a uniquely ID'd player object's "curentGames" key.)
+
+  
+
 <!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

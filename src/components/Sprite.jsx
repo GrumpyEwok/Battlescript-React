@@ -19,9 +19,9 @@ class Sprite extends Component {
     };
   }
 
-  /*
   componentDidMount() {
-    Initialization / Loading Logic here.
+/* Initialization / Loading Logic here.
+
       const sprite = new Image();
 
       sprite.src = '#';
@@ -31,8 +31,8 @@ class Sprite extends Component {
           battleSprite: sprite,
       });
     };
+    */
   }
-  */
 
   render() {
 

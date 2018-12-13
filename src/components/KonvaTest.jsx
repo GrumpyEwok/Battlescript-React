@@ -106,7 +106,8 @@ class KonvaTest extends Component {
       border: '1px solid red',
     };
 
-        // Go INTO Rect.  Access X and Y as PROPS, and then calculate the changes in Rect.  Move keydown to Rect/Sprite, because it will need to have access to those values in order to calculate how to animate.
+        // We pass our x and y values from state, which represent the sprite's coordinates relative to the canvas. This is incredibly cool.  Some of the props passed are likely unnecessary, and should be factored out.
+
     return (
       <div style={bordered}>
         <h1>{this.state.x}</h1><h1>{this.state.y}</h1>
