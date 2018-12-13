@@ -109,23 +109,25 @@ class KonvaTest extends Component {
         // We pass our x and y values from state, which represent the sprite's coordinates relative to the canvas. This is incredibly cool.  Some of the props passed are likely unnecessary, and should be factored out.
 
     return (
-      <div style={bordered} className="battleField">
-        <h1>{this.state.x}</h1><h1>{this.state.y}</h1>
-        <Stage width={this.state.width} height={this.state.height}>
-          <Layer>
-            <Sprite
-              x={this.state.x}
-              y={this.state.y}
-              velY={this.state.velY}
-              velX={this.state.velX}
-              width={50}
-              height={50}
-              fill={'blue'}
-              shadowBlur={5}
-              keys={this.state.keys}
-            />
-          </Layer>
-        </Stage>
+      <div>
+        <h2>X: {Math.floor(this.state.x)} ---- Y: {Math.floor(this.state.y)}</h2>
+        <div style={bordered} className="battleField">
+          <Stage width={this.state.width} height={this.state.height}>
+            <Layer>
+              <Sprite
+                x={this.state.x}
+                y={this.state.y}
+                velY={this.state.velY}
+                velX={this.state.velX}
+                width={50}
+                height={50}
+                fill={'blue'}
+                shadowBlur={5}
+                keys={this.state.keys}
+              />
+            </Layer>
+          </Stage>
+        </div>
       </div>
     );
   }
