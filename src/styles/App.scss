@@ -13,7 +13,21 @@
   position: absolute;
   margin-left: 3rem;
 }
+.inputs{
+  border-color:green;
+  border-width:2px;
+  background-color: black;
+  color: green !important;
+  margin-top:5px;
+  margin-left:5px;
+  &:focus{
+    outline: none;
+    border-color: green;
+    color:green;
 
+  }
+
+}
 .Stats {
   width: 30rem;
   border: 3px solid green;

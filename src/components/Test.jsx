@@ -34,9 +34,9 @@ function Test(props) {
 
   return(
     <div >
-      <input style={biggie} type="number" max="9" ref={(input) => {_x = input}} placeholder="Input X coordinate"></input>
-      <input style={biggie} type="number" max="9" ref={(input) => {_y = input}} placeholder="Input Y coordinate"></input>
-      <button style={biggie} onClick={clicker}>Click to attack</button>
+      <input className="inputs" style={biggie} type="number" max="9" ref={(input) => {_x = input}} placeholder="Input X coordinate"></input>
+      <input className="inputs" style={biggie} type="number" max="9" ref={(input) => {_y = input}} placeholder="Input Y coordinate"></input>
+      <button className="inputs" style={biggie} onClick={clicker}>Click to attack</button>
     </div>
   )
 
