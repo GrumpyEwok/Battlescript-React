@@ -33,7 +33,7 @@ debugger
     return newState;
   } if (target === 1) {
 
-      let sq = {}
+      let sq = Object.assign({}, state) //this somehow works now
       positionArray.forEach((ship, shipIndex) => {
         ship.forEach((square, squareIndex) => {
           if (square.x === x && square.y === y) {
@@ -43,13 +43,13 @@ debugger
         });
       });
       newState = Object.assign({}, state, sq);
+      alert('Hit')
     return newState;
   } else {
     alert('something is wrong with the "const target =" of your attack')
   }
 
     // response.state = state
-    alert('Hit')
 
   const sank = state.position.map(yInPositionArray => {
     return yInPositionArray.every(xInPositionArray => xInPositionArray === 2)
