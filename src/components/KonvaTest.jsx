@@ -13,8 +13,8 @@ class KonvaTest extends Component {
     super(props);
     this.state = {
       boardCoords: [], // this.props.boardCoords  This array will reference the 'grid tiles' of our board. All collisions will refer to these indices.  This value needs to get set somehow....
-      width: (window.innerWidth),
-      height: (window.innerHeight /2 ),
+      width: window.innerWidth,
+      height: 1000,
       x: 0,
       y: 0,
       velX: 0,
@@ -44,16 +44,12 @@ class KonvaTest extends Component {
 
    // Consider setting a timeOut here, if there is no key being pressed we don't need to render.
 
-      setInterval(function() {
-        console.log('tick');
-      }, 10000)
-    // Somehow this interval needs to be cleared.
   }
 
   handleUpdate() {
 
     const friction = 0.98;
-    const speed = 2;
+    const speed = 3;
     let x = this.state.x;
     let y = this.state.y;
     let velX = this.state.velX;
@@ -89,16 +85,16 @@ class KonvaTest extends Component {
     this.setState({x: x += velX});
 
 // Fix Canvas boundaries below.
-    if (x >= 295) {
-      this.setState({x: 295});
-    } else if (x <= 5) {
-      this.setState({x: 5});
+    if (x >= this.state.width - 115) {
+      this.setState({x: this.state.width - 115});
+    } else if (x <= 0) {
+      this.setState({x: 0});
     }
 
-    if (y > 295) {
-      this.setState({y: 295});
-    } else if (y <= 5) {
-      this.setState({y: 5});
+    if (y >= this.state.height - 100) {
+      this.setState({y: this.state.height - 100});
+    } else if (y <= 0) {
+      this.setState({y: 0});
     }
 
   };
@@ -110,9 +106,11 @@ class KonvaTest extends Component {
       border: '1px solid red',
     };
 
-        // Go INTO Rect.  Access X and Y as PROPS, and then calculate the changes in Rect.  Move keydown to Rect/Sprite, because it will need to have access to those values in order to calculate how to animate.
+        // We pass our x and y values from state, which represent the sprite's coordinates relative to the canvas. This is incredibly cool.  Some of the props passed are likely unnecessary, and should be factored out.
+
     return (
       <div style={bordered}>
+        <h1>{this.state.x}</h1><h1>{this.state.y}</h1>
         <Stage width={this.state.width} height={this.state.height}>
           <Layer>
             <Sprite
@@ -125,8 +123,6 @@ class KonvaTest extends Component {
               fill={'blue'}
               shadowBlur={5}
               keys={this.state.keys}
-
-
             />
           </Layer>
         </Stage>
