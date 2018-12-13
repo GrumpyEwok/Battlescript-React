@@ -1,10 +1,14 @@
 *{
   margin: 0;
   padding: 0;
+  cursor: crosshair;
+  font-family: OCR A Std, monospace;
 }
 
 .App {
   text-align: center;
+  height: 100vh;
+
 }
 
 .App-header {
@@ -17,7 +21,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+body{
+  background-color: #47516c;
+}
 .App-link {
   color: #61dafb;
 }
