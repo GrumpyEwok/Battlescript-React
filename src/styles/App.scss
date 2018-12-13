@@ -4,7 +4,11 @@
   font-family: OCR A Std, monospace;
   color: green;
 }
-
+.coords{
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+}
 .logo {
   background-image: url("../assets/logo.jpg");
   background-size: cover;

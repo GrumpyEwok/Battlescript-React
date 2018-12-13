@@ -110,7 +110,7 @@ class KonvaTest extends Component {
 
     return (
       <div>
-        <h2>X: {Math.floor(this.state.x)} ---- Y: {Math.floor(this.state.y)}</h2>
+        <h2 className="coords">X: {Math.floor(this.state.x)} <br/> Y: {Math.floor(this.state.y)}</h2>
         <div style={bordered} className="battleField">
           <Stage width={this.state.width} height={this.state.height}>
             <Layer>
