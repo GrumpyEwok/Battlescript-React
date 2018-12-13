@@ -8,11 +8,29 @@
 .logo {
   background-image: url("../assets/logo.jpg");
   background-size: cover;
-  height: 125px;
-  width: 125px;
+  height: 8rem;
+  width: 8rem;
   position: absolute;
   margin-left: 3rem;
-  mergin-top: 1rem;
+}
+
+.Stats {
+  width: 30rem;
+  border: 3px solid green;
+  font-weight:bold;
+  float:right;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+
+  ul {
+    list-style: none;
+  }
+  li {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 2rem;
+  }
 }
 
 .App {
@@ -20,8 +38,8 @@
   height: 100%;
 }
 
-.battleField {
-  background-image: url("../assets/BATTLEFIELD.jpg");
+.battlefield {
+  background-image: url("../assets/8x10board.jpg");
 }
 
 .App-header {
@@ -56,7 +74,7 @@ $scan-crt: true;
 $scan-fps: 30;
 
 // scanline-color (rgba)
-$scan-color: rgba(#000, .4);
+$scan-color: rgba(#000, .45);
 
 // set z-index on 8, like in ♥ 8-bits ♥, or…
 // set z-index on 2147483648 or more to enable scanlines on Chrome fullscreen (doesn't work in Firefox or IE);
@@ -141,7 +159,7 @@ $scan-opacity: .95;
 }
 
 @keyframes scanlines {
-  100% {
+  0% {
     background-position: 0 50%;
     // bottom: 0%; // to have a continuous scanline move, use this line (here in 0% step) instead of transform and write, in &:before, { position: absolute; bottom: 100%; }
   }
