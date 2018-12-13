@@ -13,7 +13,7 @@ console.log(gridSquares);
     <div className="grid-container">
       <style jsx>{`
         .grid-container {
-          display: grid;
+          display: none;
           grid-template-columns: repeat(10, 3rem);
           grid-template-rows: repeat(10, 3rem);
         }

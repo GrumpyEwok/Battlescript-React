@@ -10,12 +10,12 @@ function Header() {
         .header {
           width: 100%;
           height: 6rem;
-          background-color: lightblue;
-          color: tomato;
+          background-color: black;
+          color: green;
         }
       `}</style>
       <h1>BattleScripts</h1>
-      <p>You will be able to play battleship here!</p>
+      <p>The finest simulator of modern naval operations!</p>
     </div>
   )
 
