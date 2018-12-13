@@ -31,7 +31,7 @@ function Test(props) {
     <div>
       <input type="number" max="9" ref={(input) => {_x = input}} placeholder="Input X coordinate"></input>
       <input type="number" max="9" ref={(input) => {_y = input}} placeholder="Input Y coordinate"></input>
-      <button id="button" onClick={clicker}>Click to attack</button>
+      <button onClick={clicker}>Click to attack</button>
     </div>
   )
 
