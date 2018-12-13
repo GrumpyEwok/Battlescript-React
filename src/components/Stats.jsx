@@ -12,11 +12,11 @@ class Stats extends Component {
 
   componentDidMount() {
     let score= this.state.score;
-
+    let turnCounter = this.state.turnCounter;
+    
     setInterval( () => {
-      this.setState({score: score--}) }, 1000)
-  };
-
+      this.setState({score: score--}); this.setState({turnCounter: turnCounter++})}, 5000)
+    };
 
 
     render() {
@@ -38,6 +38,8 @@ class Stats extends Component {
                 text-align: left;
                 margin: 0;
                 padding: 0;
+                color: black;
+
               }
               `}</style>
             <ul>

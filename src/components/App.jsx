@@ -21,7 +21,7 @@ class App extends Component {
       let game;
 
       if (isGameRunning) {
-        game =  <div><p>Game Goes Here!</p><KonvaTest/></div> ;
+        game =  <div><KonvaTest/></div> ;
       } else {
         game = <p> isGameRunning: False </p>;
       }
