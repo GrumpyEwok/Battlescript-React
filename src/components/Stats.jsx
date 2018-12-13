@@ -1,38 +1,53 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-function Stats() {
-  // State?
-  let turnCounter = 0;
-  let score = 0; 
-  
-  return(
+class Stats extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      turnCounter: 0,
+      score: 10000
+    }
+  }
 
-    <div className="stats">
-    <style jsx>{`
-      .stats {
-        width: 15rem;
-        border: 3px solid aqua;
-        background-color: saddlebrown;
-        color: lightblue;
-      }
-      ul {
-        list-style: none;
-      }
-      li {
-        text-align: left;
-        margin: 0;
-        padding: 0;
-      }
-    `}</style>
-      <ul>
+  componentDidMount() {
+    let score= this.state.score;
 
-        <li>Turn Counter: {turnCounter}</li>
-        <hr/>
-        <li>Score: {score}</li>
-      </ul>
-    </div>
-  )
-}
+    setInterval( () => {
+      this.setState({score: score--}) }, 1000)
+  };
 
-export default Stats;
+
+
+    render() {
+      return(
+
+
+        <div className="stats">
+          <style jsx>{`
+              .stats {
+                width: 15rem;
+                border: 3px solid aqua;
+                background-color: saddlebrown;
+                color: lightblue;
+              }
+              ul {
+                list-style: none;
+              }
+              li {
+                text-align: left;
+                margin: 0;
+                padding: 0;
+              }
+              `}</style>
+            <ul>
+
+              <li>Turn Counter: {this.state.turnCounter}</li>
+              <hr/>
+              <li>Score: {this.state.score}</li>
+            </ul>
+          </div>
+        )
+      }
+    }
+    export default Stats;
