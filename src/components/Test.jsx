@@ -14,8 +14,8 @@ function Test(props) {
     const pos = props.position;
     const { dispatch } = props;
     const theState = {
-      battlefield: bf,
-      position: pos
+      battlefield: props.battlefield,
+      position: props.position
     }
     console.log(theState);
     dispatch(attack(theState, {x: 0, y: 0}))

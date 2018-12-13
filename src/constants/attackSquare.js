@@ -1,21 +1,32 @@
 // START HERE!!!
 
 export const attackSquare = (state, coordsObject) => {
-
+debugger
   console.log('i am in attackSquare');
   console.log(state);
   let newState;
   const { x, y } = coordsObject;
-  const target = state.battlefield[y][x];
+  const battlefieldArray = state.battlefield;
   const positionArray = state.position;
+  const target = battlefieldArray[y][x];
 
   if (target === 2) {
     alert('This coordinate has already been shot by you today now see?');
     return state;
   } if (target === 0) {
+    const subBattlefieldArray = battlefieldArray[y];
+    console.log(subBattlefieldArray); //this actually works!
+
+    subBattlefieldArray.splice(x, 1, 2) //this is exactly wrong; it rewrites the entire array to 2
+    console.log(subBattlefieldArray);
+
+    battlefieldArray.splice(y, 1, subBattlefieldArray);
+    console.log(battlefieldArray);
+
+
+
     newState = Object.assign({}, state, {
-      //BROKEN RIGHT HERE
-      //was "ticket: 2"
+      battlefield: battlefieldArray
     });
 
     alert('You missed the boat.')
