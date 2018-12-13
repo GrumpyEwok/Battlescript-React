@@ -15,26 +15,20 @@ class Stats extends Component {
     let turnCounter = this.state.turnCounter;
 
     setInterval( () => {
-      this.setState({score: score--}); this.setState({turnCounter: turnCounter++})}, 5000)
+      this.setState({score: score--}); this.setState({turnCounter: turnCounter++})}, 3000)
     };
 
 
     render() {
       return(
-
-
-        <div className="stats">
-          <style jsx>{`
-
-              `}</style>
-            <ul>
-
-              <li>Turn Counter: {this.state.turnCounter}</li>
-              <hr/>
-              <li>Score: {this.state.score}</li>
-            </ul>
-          </div>
-        )
-      }
+        <div className="Stats">
+          <ul>
+            <li>Turn Counter: {this.state.turnCounter}</li>
+            <li>Score: {this.state.score}</li>
+          </ul>
+        </div>
+      );
     }
-    export default Stats;
+  }
+
+  export default Stats;

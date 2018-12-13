@@ -3,13 +3,8 @@
   padding: 0;
   font-family: OCR A Std, monospace;
   color: green;
-  cursor: crosshair;
 }
-.coords{
-  position: absolute;
-  top: 3rem;
-  right: 3rem;
-}
+
 .logo {
   background-image: url("../assets/logo.jpg");
   background-size: cover;
@@ -18,31 +13,33 @@
   position: absolute;
   margin-left: 3rem;
 }
-.stats {
+
+.Stats {
   width: 30rem;
   border: 3px solid green;
   font-weight:bold;
   float:right;
   margin-right: 1rem;
   margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
+
   ul {
     list-style: none;
   }
   li {
-    text-align: left;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     font-size: 2rem;
   }
 }
+
 .App {
   text-align: center;
   height: 100%;
 }
 
-.battleField {
-  background-image: url("../assets/BATTLEFIELD.jpg");
+.battlefield {
+  background-image: url("../assets/8x10board.jpg");
 }
 
 .App-header {

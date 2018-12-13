@@ -18,14 +18,15 @@ function Header() {
           font-size: 3.5rem;
         }
         p {
-          font-size: 2rem;
+          margin-top: 6px;
+          font-size: 1rem;
         }
       `}</style>
       <div className="logo">
       </div>
       <div>
-      <h1>BattleScripts</h1>
-      <p>The finest simulator of modern naval operations!</p>
+      <h1>Battlescript</h1>
+      <p>It's like battleship, but better.</p>
       </div>
     </div>
   )
