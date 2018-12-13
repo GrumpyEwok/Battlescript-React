@@ -9,13 +9,16 @@ function Header() {
       <style jsx>{`
         .header {
           width: 100%;
-          height: 8rem;
+          height: 8.5rem;
           background-color: black;
           color: green;
         }
         h1 {
-          margin-top: 1rem;
-          font-size: 3rem;
+          margin-top: 3rem;
+          font-size: 3.5rem;
+        }
+        p {
+          font-size: 2rem;
         }
       `}</style>
       <div className="logo">
