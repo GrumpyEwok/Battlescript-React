@@ -78,7 +78,7 @@ $scan-color: rgba(#000, .45);
 
 // set z-index on 8, like in ♥ 8-bits ♥, or…
 // set z-index on 2147483648 or more to enable scanlines on Chrome fullscreen (doesn't work in Firefox or IE);
-$scan-z-index: 99;
+$scan-z-index: 2147483648;
 
 /* MOVING SCANLINE SETTINGS */
 

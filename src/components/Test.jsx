@@ -10,10 +10,6 @@ function Test(props) {
   let _x = null;
   let _y = null;
 
-  const topZ = {
-    zIndex: '1000'
-  }
-
   const biggie = {
     height: '5rem',
     fontSize: '3rem'
