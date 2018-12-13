@@ -6,25 +6,32 @@ import { attack } from './../actions';
 
 function Test(props) {
 
+  let _x = null;
+  let _y = null;
+
   const clicker = (event) => {
     event.preventDefault();
-    const bf = props.battlefield;
-    const pos = props.position;
+
     const { dispatch } = props;
     const theState = {
       battlefield: props.battlefield,
       position: props.position
     }
-
-    const randomX = Math.floor(Math.random() * 10);
-    const randomY = Math.floor(Math.random() * 10);
-    dispatch(attack(theState, {x: randomX, y: randomY}));
+    // const randomX = Math.floor(Math.random() * 10);
+    // const randomY = Math.floor(Math.random() * 10);
+    dispatch(attack(theState, {x: _x.value, y: _y.value}));
+    _x.value = '';
+    _y.value = '';
 
   }
 
+
+
   return(
     <div>
-      <button onClick={clicker}>CLICK TO TEST ATTACK</button>
+      <input ref={(input) => {_x = input}} placeholder="Input X coordinate"></input>
+      <input ref={(input) => {_y = input}} placeholder="Input Y coordinate"></input>
+      <button onClick={clicker}>Click to attack</button>
     </div>
   )
 

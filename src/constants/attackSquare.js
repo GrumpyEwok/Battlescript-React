@@ -31,7 +31,7 @@ export const attackSquare = (state, coordsObject) => {
       battlefield: battlefieldArray
     });
 
-    // alert('You missed the boat.')
+    alert('You missed the boat.')
     console.log('You missed the boat.');
     return newState;
   } if (target === 1) {
@@ -46,7 +46,7 @@ export const attackSquare = (state, coordsObject) => {
         });
       });
       newState = Object.assign({}, state, sq);
-      // alert('Hit')
+      alert('You hit something!  Hooray!')
       console.log('Hit');
       console.log('almost to sank!');
 
@@ -60,26 +60,26 @@ export const attackSquare = (state, coordsObject) => {
         if (xInSankArray) {
           switch (state.position[i].length) {
             case 4:
-            // alert("You sank a battleship!")
+            alert("You sank a battleship!")
             console.log("You sank a battleship!");
             return { type: 'battleship', index: i }
             case 3:
-            // alert("You sank a cruiser!")
+            alert("You sank a cruiser!")
             console.log("You sank a cruiser!");
 
             return { type: 'cruiser', index: i }
             case 2:
-            // alert("You sank a destroyer!")
+            alert("You sank a destroyer!")
             console.log("You sank a destroyer!");
 
             return { type: 'destroyer', index: i }
             case 1:
-            // alert("You sank a submarine!")
+            alert("You sank a submarine!")
             console.log("You sank a submarine!");
 
             return { type: 'submarine', index: i }
             default:
-            // alert("You sank a boat?!")
+            alert("You sank a boat?!")
             console.log("You sank a boat?!");
 
             return { type: 'boat', index: i }
