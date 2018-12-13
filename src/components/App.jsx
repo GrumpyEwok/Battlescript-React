@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './../styles/App.css';
+import './../styles/App.scss';
 import KonvaTest from './KonvaTest';
 import AttackGrid from './AttackGrid';
 import DefendGrid from './DefendGrid';
@@ -32,13 +32,13 @@ class App extends Component {
       let game;
 
       if (isGameRunning) {
-        game =  <div><p>Game Goes Here!</p><KonvaTest/></div> ;
+        game =  <div><KonvaTest/></div> ;
       } else {
         game = <p> isGameRunning: False </p>;
       }
 
     return (
-      <div className="App">
+      <div className="App scanlines">
         <Header/>
         {game}
         <Test battlefield={this.props.battlefield} position={this.props.position}/>

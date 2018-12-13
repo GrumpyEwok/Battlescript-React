@@ -1,60 +1,69 @@
+# Battlescript
+
+#### A new take on Battleship.
+
+#### By Josh Gearheart, Chris Gosser, Evan Filkins, and Eric Conner
+
+## Description
+
+A canvas-based Battleship simulator, built in React.  Players use the arrow keys to move a 'ship' sprite to the appropriate grid tile they'd like to launch an attack on.  State is constantly aware of the sprite's X and Y position, and uses them (along with speed, velocity and friction) to calculate how to animate the object moving.
+
+## Minimum Viable Product
+
+We began with the intention of having a two player game, that maps a character's boardCoords (i.e. where their opponent's ships are placed) to a unique ID in firebase. The ability to launch an attack (i.e. dispatch an action with a payload of the sprite's pos X and pos Y) and receive a response of 'Hit' or 'Miss' is our most basic playable functionality.  MVP should also have a way of alerting a player if the game is finished, i.e. all of one player's ships have been sunk.
+
+### Specs
+
+* Incorporates a Konva canvas, leveraging React-Konva for animation.
+* Generates a board (an array of 10 arrays) that contain ships appropriately placed.  In a minimum viable product these are placed randomly, but Konva allows for drag-and-drop functionality which would allow players to place their own ships.
+
+## Setup/Installation Requirements
+
+Clone this repo, navigate to the directory in which it has been stored via terminal, install dependencies and host locally.
+
+```
+git clone http://github.com/GrumpyEwok/Battlescript-React
+
+cd ~/path/to/battlescript-react
+
+npm install
+
+npm run start
+```
+
+# Presentation Notes:
+  * Evan starts, maybe, talks about Concept and (potential) failure to implement some reducer logic.  Demo Konva.
+
+  * Josh + Eric talk about what we can do (i.e. a board is generated, and filled correctly, which is cool -- people just can't see it out of console, but we can emphasize the point that it's there) and what was particularly challenging about what we couldn't.
+
+  * We should also talk about our original '2player' intention, and how firebase could have facilitated that by storing battlefield arrays under unique keys (likely referenced in a uniquely ID'd player object's "curentGames" key.)
+
+
+## Support and contact details
+- For questions or support open an issue right here in this repo!
+
+## Technologies Used
+- This uses React, Webpack, Javascript, npm, and more!
+
+### License
+This software is licensed under GNU GPLv3.
+
+
+
 Links:
 
-Best Konva Tutorial https://blog.logrocket.com/creating-canvas-graphics-in-react-cad70cd5b210
+Best Konva Tutorial: https://blog.logrocket.com/creating-canvas-graphics-in-react-cad70cd5b210
 
-Water Movement Demo http://jsfiddle.net/loktar/dMYvG/
+Water Movement Demo: http://jsfiddle.net/loktar/dMYvG/
 
-Fullscreen/Responsive Canvas https://konvajs.github.io/docs/sandbox/Responsive_Canvas.html
+Fullscreen/Responsive Canvas: https://konvajs.github.io/docs/sandbox/Responsive_Canvas.html
 
-Batch Draw https://konvajs.github.io/docs/performance/Batch_Draw.html
+Batch Draw: https://konvajs.github.io/docs/performance/Batch_Draw.html
 
-Keydown Stack https://stackoverflow.com/questions/22262130/javascript-game-move-character-while-key-down
+Keydown Stack: https://stackoverflow.com/questions/22262130/javascript-game-move-character-while-key-down
 
-Continuous Movement https://gamedev.stackexchange.com/questions/130576/how-can-i-make-my-movement-continuous
+Continuous Movement: https://gamedev.stackexchange.com/questions/130576/how-can-i-make-my-movement-continuous
 
-Water-Canvas Filter Effect http://code.almeros.com/code-examples/water-effect-canvas/#.XBAHkRNKi3K
+Water-Canvas Filter Effect: http://code.almeros.com/code-examples/water-effect-canvas/#.XBAHkRNKi3K
 
-<!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/). -->
+CRT Scanline Codepen: https://codepen.io/meduzen/pen/zxbwRV

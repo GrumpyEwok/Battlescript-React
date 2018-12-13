@@ -9,13 +9,25 @@ function Header() {
       <style jsx>{`
         .header {
           width: 100%;
-          height: 6rem;
-          background-color: lightblue;
-          color: tomato;
+          height: 8.5rem;
+          background-color: black;
+          color: green;
+        }
+        h1 {
+          margin-top: 3rem;
+          font-size: 3.5rem;
+        }
+        p {
+          margin-top: 6px;
+          font-size: 1rem;
         }
       `}</style>
-      <h1>BattleScripts</h1>
-      <p>You will be able to play battleship here!</p>
+      <div className="logo">
+      </div>
+      <div>
+      <h1>Battlescript</h1>
+      <p>It's like battleship, but better.</p>
+      </div>
     </div>
   )
 

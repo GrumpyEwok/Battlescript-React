@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "compass": "^0.1.1",
     "d3-timer": "^1.0.9",
     "konva": "^2.5.1",
+    "node-sass": "^4.11.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-konva": "^16.6.31",
