@@ -22,7 +22,10 @@
   "eslintConfig": {
     "extends": "react-app",
     "no-unused-vars": 1,
-    "no-undef": 1
+    "no-undef": 1,
+    "parserOptions": {
+      "ecmaVersion": 6
+    }
   },
   "browserslist": [
     ">0.2%",

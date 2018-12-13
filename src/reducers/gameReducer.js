@@ -1,19 +1,22 @@
-// import constants from './../constants';
-// import * as functions from './../constants/businessLogic';
 import { createState, initializeOcean, createBattleField, getCoords, isCoordsValid, getShipCoords, updateBattlefield, updateFleet, random } from './../constants/businessLogic';
+import { attackSquare } from './../constants/attackSquare';
+import PropTypes from 'prop-types';
 
-export default (state = {}, action) => {
-
-  //start game will do:
-  // - create two oceans
-  // - fill oceans with fleets
-  // set those oceans/fleets to p1 and p2's battlefield/position arrays
+export default (state = {cat: 'doug'}, action) => {
+  let newState;
 
   switch (action.type) {
 
   case 'START_GAME':
 
-    const newState = createState();
+    newState = createState();
+    console.log(newState);
+    return newState;
+
+  case 'ATTACK':
+
+    const stateAfterAttack = attackSquare(action.state, action.coordsObject);
+    newState = Object.assign({}, stateAfterAttack);
     console.log(newState);
     return newState;
 

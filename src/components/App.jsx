@@ -6,14 +6,25 @@ import DefendGrid from './DefendGrid';
 import Header from './Header';
 import Stats from './Stats';
 import { connect } from 'react-redux';
-// import constants from './../constants';
 import { startGame } from './../actions';
 import PropTypes from 'prop-types';
+import Test from './Test';
 
 class App extends Component {
-  constructor() {
-      super();
+  constructor(props) {
+      super(props);
       this.state = {isGameRunning: true};
+      console.log(this.props);
+    }
+
+    componentWillMount() {
+      console.log('dispatched!');
+    }
+
+    componentDidMount() {
+      const { dispatch } = this.props;
+      dispatch(startGame());
+      console.log('MOUNTED' + this.props);
     }
 
     render() {
@@ -30,18 +41,17 @@ class App extends Component {
       <div className="App">
         <Header/>
         {game}
-        <AttackGrid/>
-        <DefendGrid/>
+        <Test battlefield={this.props.battlefield} position={this.props.position}/>
         <Stats/>
       </div>
     );
   }
 }
 
-App.propTypes = {
-  battlefield: PropTypes.array,
-  position: PropTypes.array
-}
+// App.propTypes = {
+//   battlefield: PropTypes.array,
+//   position: PropTypes.array
+// }
 
 const mapStateToProps = state => {
   return{

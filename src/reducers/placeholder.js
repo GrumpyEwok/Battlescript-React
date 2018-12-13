@@ -195,102 +195,102 @@
 //
 //     //******************************************************************************
 //
-//     function attack (playerNumber, coordsObject) {
-//       debugger
-//       const playerState = state.players['player' + playerNumber];
-//       const { x, y } = coordsObject;
-//       const target = playerState.battlefield[y][x];
-//       const positionArray = playerState.position;
-//
-//       if (state.finished === true) {
-//         alert('The game is over go home.')
-//         return state;
-//       }
-//
-//       state.counter ++;
-//
-//       if (target === 2) {
-//         alert('This coordinate has already been shot by you today now see?');
-//         return state;
-//       } if (target === 0) {
-//         newState = Object.assign({}, state, {
-//           target: 2
-//         });
-//
-//         alert('You missed the boat.')
-//         return newState;
-//       } if (target === 1) {
-//         newState = Object.assign({}, state, {
-//           positionArray.forEach((ship, shipIndex)
-//           // => {
-//           //   ship.forEach((square, squareIndex) => {
-//           //     if (square.x === x && square.y === y) {
-//           //       playerState.position[shipIndex][squareIndex] = 2;
-//           //       playerState.battlefield[y][x] = 2;
-//           //     }
-//           //   });
-//           // }
-//         )
-//         });
-//         return newState;
-//       } else {
-//         alert('something is wrong with the "const target =" of your attack')
-//       }
-//
-//         // response.playerState = playerState
-//         alert('Hit')
-//
-//       const sank = playerState.position.map(yInPositionArray => {
-//         return yInPositionArray.every(xInPositionArray => xInPositionArray === 2)
-//       })
-//
-//       const isSank = sank.some(xInSankArray => xInSankArray === true)
-//
-//       const sankType = sank.map((xInSankArray, i) => {
-//         if (xInSankArray) {
-//           switch (playerState.position[i].length) {
-//             case 4:
-//               return { type: 'battleship', index: i }
-//             case 3:
-//               return { type: 'cruiser', index: i }
-//             case 2:
-//               return { type: 'destroyer', index: i }
-//             case 1:
-//               return { type: 'submarine', index: i }
-//             default:
-//               return { type: 'boat', index: i }
-//           }
-//         }
-//         else {
-//           return false
-//         }
-//       }).filter(xInSankArray => xInSankArray !== false)
-//
-//       if (isSank) {
-//
-//         // THIS IS WEIRD, SO LIKE GO OVER THIS FIRST THING... DA-BUGG IT!
-//         // what do we do with state here???
-//
-//         const removed = sankType[0].index
-//         const start = playerState.position.slice(0, removed)
-//         const end = playerState.position.slice(removed+1, playerState.position.length)
-//         playerState.position = [ ...start, ...end ]
-//
-//
-//         // response.playerState = playerState
-//         // response.msg = `You just sank the ${sankType[0].type}`
-//       }
-//
-//       if (playerState.position.length === 0) {
-//         // response.playerState.finished = true
-//         alert('The game has been won! It lasted for')
-//         // response.msg = `Win! You completed the game in ${playerState[playerEntry].counter} moves`
-//       }
-//
-//       return newState;
-//
-//
-//   default:
-//     return state;
-//   }
-// }
+    function attack (playerNumber, coordsObject) {
+      debugger
+      const playerState = state.players['player' + playerNumber];
+      const { x, y } = coordsObject;
+      const target = playerState.battlefield[y][x];
+      const positionArray = playerState.position;
+
+      if (state.finished === true) {
+        alert('The game is over go home.')
+        return state;
+      }
+
+      state.counter ++;
+
+      if (target === 2) {
+        alert('This coordinate has already been shot by you today now see?');
+        return state;
+      } if (target === 0) {
+        newState = Object.assign({}, state, {
+          target: 2
+        });
+
+        alert('You missed the boat.')
+        return newState;
+      } if (target === 1) {
+        newState = Object.assign({}, state, {
+          positionArray.forEach((ship, shipIndex)
+          => {
+            ship.forEach((square, squareIndex) => {
+              if (square.x === x && square.y === y) {
+                playerState.position[shipIndex][squareIndex] = 2;
+                playerState.battlefield[y][x] = 2;
+              }
+            });
+          }
+        )
+        });
+        return newState;
+      } else {
+        alert('something is wrong with the "const target =" of your attack')
+      }
+
+        // response.playerState = playerState
+        alert('Hit')
+
+      const sank = playerState.position.map(yInPositionArray => {
+        return yInPositionArray.every(xInPositionArray => xInPositionArray === 2)
+      })
+
+      const isSank = sank.some(xInSankArray => xInSankArray === true)
+
+      const sankType = sank.map((xInSankArray, i) => {
+        if (xInSankArray) {
+          switch (playerState.position[i].length) {
+            case 4:
+              return { type: 'battleship', index: i }
+            case 3:
+              return { type: 'cruiser', index: i }
+            case 2:
+              return { type: 'destroyer', index: i }
+            case 1:
+              return { type: 'submarine', index: i }
+            default:
+              return { type: 'boat', index: i }
+          }
+        }
+        else {
+          return false
+        }
+      }).filter(xInSankArray => xInSankArray !== false)
+
+      if (isSank) {
+
+        // THIS IS WEIRD, SO LIKE GO OVER THIS FIRST THING... DA-BUGG IT!
+        // what do we do with state here???
+
+        const removed = sankType[0].index
+        const start = playerState.position.slice(0, removed)
+        const end = playerState.position.slice(removed+1, playerState.position.length)
+        playerState.position = [ ...start, ...end ]
+
+
+        // response.playerState = playerState
+        // response.msg = `You just sank the ${sankType[0].type}`
+      }
+
+      if (playerState.position.length === 0) {
+        // response.playerState.finished = true
+        alert('The game has been won! It lasted for')
+        // response.msg = `Win! You completed the game in ${playerState[playerEntry].counter} moves`
+      }
+
+      return newState;
+
+
+  default:
+    return state;
+  }
+}

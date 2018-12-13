@@ -15,7 +15,7 @@ console.log(store.getState())
 
 const render = (Component) => {
   ReactDOM.render(
-      <Provider store ={store}>
+      <Provider store={store}>
         <Component/>
       </Provider>,
     document.getElementById('root')
