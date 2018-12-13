@@ -2,99 +2,99 @@
 // const OCEAN_SIZE = 10
 // const FLEET = [4, 3, 2, 1]
 //
-// function attack (playerState, coords) {
-//   debugger
-//   const { x, y } = coords
-//
-//   if (playerState.p1State) {
-//     const playerEntry = "player1"
-//   }
-//
-//   if (playerState.p2State) {
-//     const playerEntry = "player2"
-//   }
-//
-// //coords are 0-9, aka indices (not 1-10)
-//   const response = { }
-//
-//   if (playerState[playerEntry].finished === true) {
-//     response.playerState[playerEntry] = playerState[playerEntry]
-//     response.msg = 'Dude it\'s finished!'
-//
-//     return response
-//   }
-//
-//   playerState[playerEntry].counter += 1
-//   const target = playerState[playerEntry].battlefield[y][x]
-//
-//   if (target === 2) {
-//     response.playerState[playerEntry] = playerState[playerEntry]
-//     response.msg = 'You already hit this position!'
-//   }
-//
-//   if (target === 0) {
-//     playerState[playerEntry].battlefield[y][x] = 2
-//     response.playerState[playerEntry] = playerState[playerEntry]
-//     response.msg = `Miss New Hampshire is ${playerState[playerEntry].battlefield}`
-//   }
-//
-//   if (target === 1) {
-//     playerState[playerEntry].position.forEach((ship, idxShip) => {
-//       ship.forEach((block, idxBlock) => {
-//         if (block.x === x && block.y === y) {
-//           playerState[playerEntry].position[idxShip][idxBlock] = 2
-//           playerState[playerEntry].battlefield[y][x] = 2
-//         }
-//
-//       })
-//     })
-//     response.playerState[playerEntry] = playerState[playerEntry]
-//     response.msg = 'Hit'
-//   }
-//
-//   const sank = playerState[playerEntry].position.map(y => {
-//     return y.every(x => x === 2)
-//   })
-//
-//   const isSank = sank.some(x => x === true)
-//
-//   const sankType = sank.map((x, i) => {
-//     if (x) {
-//       switch (playerState[playerEntry].position[i].length) {
-//         case 4:
-//           return { type: 'battleship', index: i }
-//         case 3:
-//           return { type: 'cruiser', index: i }
-//         case 2:
-//           return { type: 'destroyer', index: i }
-//         case 1:
-//           return { type: 'submarine', index: i }
-//         default:
-//           return { type: 'boat', index: i }
-//       }
-//     }
-//     else {
-//       return false
-//     }
-//   })
-//   .filter(x => x !== false)
-//
-//   if (isSank) {
-//     const removed = sankType[0].index
-//     const start = playerState[playerEntry].position.slice(0, removed)
-//     const end = playerState[playerEntry].position.slice(removed+1, playerState[playerEntry].position.length)
-//     playerState[playerEntry].position = [ ...start, ...end ]
-//     response.playerState[playerEntry] = playerState[playerEntry]
-//     response.msg = `You just sank the ${sankType[0].type}`
-//   }
-//
-//   if (playerState[playerEntry].position.length === 0) {
-//     response.playerState[playerEntry].finished = true
-//     response.msg = `Win! You completed the game in ${playerState[playerEntry].counter} moves`
-//   }
-//
-//   return response
-// }
+function attack (playerState, coords) {
+  debugger
+  const { x, y } = coords
+
+  if (playerState.p1State) {
+    const playerEntry = "player1"
+  }
+
+  if (playerState.p2State) {
+    const playerEntry = "player2"
+  }
+
+//coords are 0-9, aka indices (not 1-10)
+  const response = { }
+
+  if (playerState[playerEntry].finished === true) {
+    response.playerState[playerEntry] = playerState[playerEntry]
+    response.msg = 'Dude it\'s finished!'
+
+    return response
+  }
+
+  playerState[playerEntry].counter += 1
+  const target = playerState[playerEntry].battlefield[y][x]
+
+  if (target === 2) {
+    response.playerState[playerEntry] = playerState[playerEntry]
+    response.msg = 'You already hit this position!'
+  }
+
+  if (target === 0) {
+    playerState[playerEntry].battlefield[y][x] = 2
+    response.playerState[playerEntry] = playerState[playerEntry]
+    response.msg = `Miss New Hampshire is ${playerState[playerEntry].battlefield}`
+  }
+
+  if (target === 1) {
+    playerState[playerEntry].position.forEach((ship, idxShip) => {
+      ship.forEach((block, idxBlock) => {
+        if (block.x === x && block.y === y) {
+          playerState[playerEntry].position[idxShip][idxBlock] = 2
+          playerState[playerEntry].battlefield[y][x] = 2
+        }
+
+      })
+    })
+    response.playerState[playerEntry] = playerState[playerEntry]
+    response.msg = 'Hit'
+  }
+
+  const sank = playerState[playerEntry].position.map(y => {
+    return y.every(x => x === 2)
+  })
+
+  const isSank = sank.some(x => x === true)
+
+  const sankType = sank.map((x, i) => {
+    if (x) {
+      switch (playerState[playerEntry].position[i].length) {
+        case 4:
+          return { type: 'battleship', index: i }
+        case 3:
+          return { type: 'cruiser', index: i }
+        case 2:
+          return { type: 'destroyer', index: i }
+        case 1:
+          return { type: 'submarine', index: i }
+        default:
+          return { type: 'boat', index: i }
+      }
+    }
+    else {
+      return false
+    }
+  })
+  .filter(x => x !== false)
+
+  if (isSank) {
+    const removed = sankType[0].index
+    const start = playerState[playerEntry].position.slice(0, removed)
+    const end = playerState[playerEntry].position.slice(removed+1, playerState[playerEntry].position.length)
+    playerState[playerEntry].position = [ ...start, ...end ]
+    response.playerState[playerEntry] = playerState[playerEntry]
+    response.msg = `You just sank the ${sankType[0].type}`
+  }
+
+  if (playerState[playerEntry].position.length === 0) {
+    response.playerState[playerEntry].finished = true
+    response.msg = `Win! You completed the game in ${playerState[playerEntry].counter} moves`
+  }
+
+  return response
+}
 //
 // function createDb () {
 //   let db = {
