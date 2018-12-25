@@ -46,7 +46,8 @@ npm run start
 - This uses React, Webpack, Javascript, npm, and more!
 
 ### License
-This software is licensed under GNU GPLv3.
+This software is available under Apache 2.0 Software Licensure.
+Please refer to [this page](https://www.apache.org/licenses/LICENSE-2.0) for further information.
 
 
 
@@ -66,4 +67,4 @@ Continuous Movement: https://gamedev.stackexchange.com/questions/130576/how-can-
 
 Water-Canvas Filter Effect: http://code.almeros.com/code-examples/water-effect-canvas/#.XBAHkRNKi3K
 
-CRT Scanline Codepen: https://codepen.io/meduzen/pen/zxbwRV
+CRT Scanline Codepen: https://codepen.io/meduzen/pen/zxbwRV  -- This is clearly derivative. Should be refactored. SCSS was probably introduced solely to implement this effect as it was found.

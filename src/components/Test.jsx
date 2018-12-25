@@ -10,12 +10,7 @@ function Test(props) {
   let _x = null;
   let _y = null;
 
-  const biggie = {
-    height: '5rem',
-    fontSize: '3rem'
-  }
-
-  const clicker = (event) => {
+  const launchAttack = (event) => {
     event.preventDefault();
     const { dispatch } = props;
     const theState = {
@@ -30,13 +25,11 @@ function Test(props) {
 
   }
 
-
-
   return(
-    <div >
-      <input style={biggie} type="number" max="9" ref={(input) => {_x = input}} placeholder="Input X coordinate"></input>
-      <input style={biggie} type="number" max="9" ref={(input) => {_y = input}} placeholder="Input Y coordinate"></input>
-      <button style={biggie} onClick={clicker}>Click to attack</button>
+    <div className='Target'>
+      <input type="number" max="9" ref={(input) => {_x = input}} placeholder="Input X coordinate"></input>
+      <input type="number" max="9" ref={(input) => {_y = input}} placeholder="Input Y coordinate"></input>
+      <button onClick={launchAttack}>Click to attack</button>
     </div>
   )
 

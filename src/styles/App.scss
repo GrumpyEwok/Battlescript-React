@@ -5,13 +5,28 @@
   color: green;
 }
 
-.logo {
-  background-image: url("../assets/logo.jpg");
-  background-size: cover;
-  height: 8rem;
-  width: 8rem;
-  position: absolute;
-  margin-left: 3rem;
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1em auto auto;
+}
+
+@mixin logo($source) {
+  height: 12rem;
+  width: 12rem;
+  align-self: center;
+  background-image: $source;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.logo-a {
+  @include logo(url("../assets/battleship-a.png"))
+}
+
+.logo-b {
+  @include logo(url("../assets/battleship-b.png"))
 }
 
 .Stats {
@@ -33,6 +48,20 @@
   }
 }
 
+.Target {
+  height: 4em;
+  margin-top: 1em;
+  input {
+    height: 2em;
+    border-radius: 5%;
+  }
+  button {
+    height: 1.5em;
+    margin: auto auto auto 8px;
+    border-radius: 5%;
+  }
+}
+
 .App {
   text-align: center;
   height: 100%;
@@ -42,15 +71,12 @@
   background-image: url("../assets/8x10board.jpg");
 }
 
-.App-header {
-  background-color: #282c34;
-  /* min-height: ; */
+.Header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 body {
@@ -78,7 +104,10 @@ $scan-color: rgba(#000, .45);
 
 // set z-index on 8, like in ♥ 8-bits ♥, or…
 // set z-index on 2147483648 or more to enable scanlines on Chrome fullscreen (doesn't work in Firefox or IE);
-$scan-z-index: 2147483648;
+
+/* This does not appear to be true. -- Evan */
+
+$scan-z-index: 10;
 
 /* MOVING SCANLINE SETTINGS */
 
@@ -145,7 +174,7 @@ $scan-opacity: .95;
     transparent 40%,
     $scan-color 51%
     );
-    background-size: 100% $scan-width*2;
+    background-size: 20% $scan-width;
     @include scan-crt($scan-crt);
   }
 }

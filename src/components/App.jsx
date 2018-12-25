@@ -38,7 +38,7 @@ class App extends Component {
       }
 
     return (
-      <div className="App scanlines">
+      <div className="App">
         <Header/>
         {game}
         <Test battlefield={this.props.battlefield} position={this.props.position}/>
