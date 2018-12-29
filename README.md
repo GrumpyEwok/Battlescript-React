@@ -40,10 +40,10 @@ npm run start
 
 
 ## Support and contact details
-- For questions or support open an issue right here in this repo!
+- For questions or insights please open an Issue in this repo, and we will happily address it.
 
 ## Technologies Used
-- This uses React, Webpack, Javascript, npm, and more!
+- This app was bootstrapped with create-react-app, which comes with a set of pre-loaded dependencies for various environments, and was developed in Javascript. React-Konva (a canvas library) was used to implement animation.  
 
 ### License
 This software is available under Apache 2.0 Software Licensure.
@@ -67,4 +67,4 @@ Continuous Movement: https://gamedev.stackexchange.com/questions/130576/how-can-
 
 Water-Canvas Filter Effect: http://code.almeros.com/code-examples/water-effect-canvas/#.XBAHkRNKi3K
 
-CRT Scanline Codepen: https://codepen.io/meduzen/pen/zxbwRV  -- This is clearly derivative. Should be refactored. SCSS was probably introduced solely to implement this effect as it was found.
+CRT Scanline Codepen: https://codepen.io/meduzen/pen/zxbwRV  -- This must be refactored. As currently implemented, it not ideal.
