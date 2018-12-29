@@ -67,4 +67,4 @@ Continuous Movement: https://gamedev.stackexchange.com/questions/130576/how-can-
 
 Water-Canvas Filter Effect: http://code.almeros.com/code-examples/water-effect-canvas/#.XBAHkRNKi3K
 
-CRT Scanline Codepen: https://codepen.io/meduzen/pen/zxbwRV  -- This must be refactored. As currently implemented, it not ideal.
+CRT Scanline Codepen: https://codepen.io/meduzen/pen/zxbwRV  -- This must be refactored. As implemented it's not ideal.
