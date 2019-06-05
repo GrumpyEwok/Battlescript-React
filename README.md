@@ -30,7 +30,6 @@ npm install
 
 npm run start
 ```
-
 # Presentation Notes:
   * Evan starts, maybe, talks about Concept and (potential) failure to implement some reducer logic.  Demo Konva.
 
@@ -49,22 +48,3 @@ npm run start
 This software is available under Apache 2.0 Software Licensure.
 Please refer to [this page](https://www.apache.org/licenses/LICENSE-2.0) for further information.
 
-
-
-Links:
-
-Best Konva Tutorial: https://blog.logrocket.com/creating-canvas-graphics-in-react-cad70cd5b210
-
-Water Movement Demo: http://jsfiddle.net/loktar/dMYvG/
-
-Fullscreen/Responsive Canvas: https://konvajs.github.io/docs/sandbox/Responsive_Canvas.html
-
-Batch Draw: https://konvajs.github.io/docs/performance/Batch_Draw.html
-
-Keydown Stack: https://stackoverflow.com/questions/22262130/javascript-game-move-character-while-key-down
-
-Continuous Movement: https://gamedev.stackexchange.com/questions/130576/how-can-i-make-my-movement-continuous
-
-Water-Canvas Filter Effect: http://code.almeros.com/code-examples/water-effect-canvas/#.XBAHkRNKi3K
-
-CRT Scanline Codepen: https://codepen.io/meduzen/pen/zxbwRV  -- This must be refactored. As implemented it's not ideal.
